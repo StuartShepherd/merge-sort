@@ -8,7 +8,7 @@ public class MergeSortTests
     public void Sorts_Array_ReturnsSortedArray(int[] x, int[] expected)
     {
         var mergeSort = new MergeSort();
-        var actual = mergeSort.Sort(x, 0, x.Length - 1);
+        var actual = mergeSort.Sort(x);
 
         Assert.IsNotNull(actual);
         CollectionAssert.AreEqual(actual, expected);

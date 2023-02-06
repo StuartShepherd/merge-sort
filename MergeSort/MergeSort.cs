@@ -2,14 +2,19 @@
 
 public class MergeSort
 {
-    public int[] Sort(int[] array, int left, int right)
+    public int[] Sort(int[] array)
+    {
+        return InitialiseSort(array, 0, array.Length - 1);
+    }
+
+    public int[] InitialiseSort(int[] array, int left, int right)
     {
         if (left < right)
         {
             int middle = left + (right - left) / 2;
 
-            Sort(array, left, middle);
-            Sort(array, middle + 1, right);
+            InitialiseSort(array, left, middle);
+            InitialiseSort(array, middle + 1, right);
 
             MergeArray(array, left, middle, right);
         }
